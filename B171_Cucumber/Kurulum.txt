@@ -1,0 +1,18 @@
+Cucumber framework'u oluşturmak için;
+    1-selenium-java,webDriverManager,Cucumber-java ve Cucumber-junit(aynı version olmalı) dependencyleri
+    pom.xml dosyamıza koyarız.
+    2-file>settings>plugins>marketPlace bölümünden cucumber for java ve gherkin pluginlerini yükleriz
+    3-Test package'ı altında resources isminde new directory oluşturup bu package altında da feature
+    file larimizi oluştururuz
+    4-resources package'ı altında features isminde bir package oluştururuz ve bu package altında da
+    .feature uzantılı dosyalarımızı oluşturabiliriz
+    5-java package'ı altında 4 tane package oluştururuz
+        a-pages-->Locate'lerimizi bu package altında tutarız
+        b-utilities-->Bu package altında Driver,ConfigReader ve ReusebleMethods gibi classlarımız olur
+        c-stepDefinitions-->.feature file da yazmış olduğumuz scenario'lar ile ilgili kodları bu package
+        altında tutarız
+        d-runners-->Bu package altında Runner isminde bir class oluşturup, bu class sayesinde istediğimiz
+        scenario ları tek bir yerden çalıştırıp raporlar alabiliriz.
+    6-Temel test datalarımızı tuttuğumuz configuration.properties dosyasını proje seviyesinden oluştururuz
+    7-Scenario larımızı çalıştırmadan önce feature file ve stepDefinition ları derlemesi için ctrl+F9(built)
+    tuşlarına basarız
